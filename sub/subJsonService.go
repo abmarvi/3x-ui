@@ -322,7 +322,7 @@ func (s *SubJsonService) genServer(inbound *model.Inbound, streamSettings json_u
 
 	serverData := make([]ServerSetting, 1)
 	serverData[0] = ServerSetting{
-		Address:  inbound.Listen,
+		Address:  "95.163.152.203",
 		Port:     inbound.Port,
 		Level:    8,
 		Password: client.Password,
@@ -371,7 +371,6 @@ type OutboundSettings struct {
 }
 
 type VnextSetting struct {
-	Address string      `json:"address"`
 	Port    int         `json:"port"`
 	Users   []UserVnext `json:"users"`
 }
@@ -387,7 +386,6 @@ type UserVnext struct {
 type ServerSetting struct {
 	Password string `json:"password"`
 	Level    int    `json:"level"`
-	Address  string `json:"address"`
 	Port     int    `json:"port"`
 	Flow     string `json:"flow,omitempty"`
 	Method   string `json:"method,omitempty"`
