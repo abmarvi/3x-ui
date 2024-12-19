@@ -298,7 +298,7 @@ func (s *SubJsonService) genVnext(inbound *model.Inbound, streamSettings json_ut
 
 	vnextData := make([]VnextSetting, 1)
 	vnextData[0] = VnextSetting{
-		Address: inbound.Listen,
+		Address: "95.163.152.203",
 		Port:    inbound.Port,
 		Users:   usersData,
 	}
